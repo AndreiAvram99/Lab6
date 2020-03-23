@@ -45,13 +45,13 @@ public class ControlPanel extends JPanel{
 
     private void save(ActionEvent e) {
         try {
-            ImageIO.write(FRAME.canvas.image, "PNG", new FileOutputStream("d:/picture.png"));
+            ImageIO.write(FRAME.canvas.image, "PNG", new FileOutputStream("picture.png"));
         } catch (IOException ex) { ex.printStackTrace(); }
     }
 
     private void load(ActionEvent e) {
         try {
-            FileInputStream readImg = new FileInputStream("d:/picture.png");
+            FileInputStream readImg = new FileInputStream("picture.png");
             BufferedImage img = ImageIO.read(readImg);
             FRAME.canvas.setImage(img);
 
